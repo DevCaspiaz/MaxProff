@@ -1,0 +1,24 @@
+@use '../abstracts/vairables' as *;
+@use '../abstracts/mixins' as *;
+
+.btn-white{
+    border: 1px solid $green;
+    border-radius: 3px;
+    color: $green;
+    font-size: $default-size;
+    font-weight: 500;
+    background-color: transparent;
+    padding: 1.3rem 2.3rem;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover{
+        background-color: $green;
+        color: $smoky;
+        box-shadow: 0 1rem 2rem rgb($black, .2);
+    }
+
+    &:active, &:focus{
+        transform: scale(1.05);
+    }
+}
