@@ -4,13 +4,13 @@
 
 
 .header{
+
     .nav{
         margin: 0 12rem;
         padding: 2.3rem 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 1px solid $green;
 
         .icon{
             font-size: 2.8rem;
@@ -33,10 +33,18 @@
             &--items{
                 &__link{
                     color: $black;
+                    display: block;
+                    transition: all .2s;
+
+                    &:hover{
+                        color: $green;
+                        transform: translateY(-.2rem);
+                    }
+                    &:active{
+                        transform: translateY(.2rem);
+                    }
                 }
-                &:hover a{
-                    color: $blue-2;
-                }
+
             }
         }
 
@@ -57,12 +65,18 @@
                     font-size: $heading-2;
                     border: 1px solid transparent;
                     transition: all .2s;
-                }
-                &:hover .contact--number__link{
-                    border-color: $green;
-                    border-radius: 3px;
-                    background-color: $green;
-                    color: $smoky;
+
+                    &:hover{
+                        border-color: $green;
+                        border-radius: 3px;
+                        background-color: $green;
+                        color: $smoky;
+                        box-shadow: 0 1rem 2rem rgb($black, .2);
+                    }
+
+                    &:active{
+                        transform: translateY(.2rem);
+                    }
                 }
             }
 
@@ -72,4 +86,66 @@
             }
         }
     }
+
+    .menu{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+        gap: 2rem;
+        margin: 0 12rem;
+        border-top: 1px solid $green;
+        border-bottom: 1px solid $green;
+        &-items{
+            text-align: center;
+            padding: 1.3rem 2.3rem;
+            list-style-type: none;
+            position: relative;
+
+            transition: all .2s;
+            &>a{
+                color: $black;
+                font-weight: 500;
+            }
+
+            &:hover{
+                background-color: $green;
+            }
+
+            .dropdown{
+                width: 100%;
+                opacity: 0;
+                position: absolute;
+                top: 5.4rem;
+                left: 0;
+                display: none;
+                box-shadow: rgba(190, 190, 190, 0.25) 0 0 10px;
+                transition: all .2s;
+                li{
+                    list-style-type: none;
+                    padding: 1.3rem 2.3rem;
+                    margin: 1.3rem 2.3rem;
+                    border: 1px solid transparent;
+                    border-radius: 3px;
+                    text-align: left;
+                    &>a{
+                        color: $black;
+                    }
+
+                    &:hover{
+                        border-color: $green;
+                    }
+                }
+            }
+        }
+
+        .apart-renov:hover, .intr-design:hover, .room-renov:hover{
+            &>.dropdown{
+                display: block;
+                opacity: 1;
+            }
+        }
+
+    }
+
+
 }

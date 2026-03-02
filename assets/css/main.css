@@ -51,7 +51,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #6CAC3D;
 }
 .header .nav .icon {
   font-size: 2.8rem;
@@ -72,9 +71,15 @@ body {
 }
 .header .nav__list--items__link {
   color: #171616;
+  display: block;
+  transition: all 0.2s;
 }
-.header .nav__list--items:hover a {
-  color: #234875;
+.header .nav__list--items__link:hover {
+  color: #6CAC3D;
+  transform: translateY(-0.2rem);
+}
+.header .nav__list--items__link:active {
+  transform: translateY(0.2rem);
 }
 .header .nav__contact {
   display: flex;
@@ -96,13 +101,68 @@ body {
   border: 1px solid transparent;
   transition: all 0.2s;
 }
-.header .nav__contact--number:hover .contact--number__link {
+.header .nav__contact--number .contact--number__link:hover {
   border-color: #6CAC3D;
   border-radius: 3px;
   background-color: #6CAC3D;
   color: #F2F2F2;
+  box-shadow: 0 1rem 2rem rgba(23, 22, 22, 0.2);
+}
+.header .nav__contact--number .contact--number__link:active {
+  transform: translateY(0.2rem);
 }
 .header .nav__contact--days {
   font-weight: 400;
   font-size: 1.4rem;
+}
+.header .menu {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  gap: 2rem;
+  margin: 0 12rem;
+  border-top: 1px solid #6CAC3D;
+  border-bottom: 1px solid #6CAC3D;
+}
+.header .menu-items {
+  text-align: center;
+  padding: 1.3rem 2.3rem;
+  list-style-type: none;
+  position: relative;
+  transition: all 0.2s;
+}
+.header .menu-items > a {
+  color: #171616;
+  font-weight: 500;
+}
+.header .menu-items:hover {
+  background-color: #6CAC3D;
+}
+.header .menu-items .dropdown {
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 5.4rem;
+  left: 0;
+  display: none;
+  box-shadow: rgba(190, 190, 190, 0.25) 0 0 10px;
+  transition: all 0.2s;
+}
+.header .menu-items .dropdown li {
+  list-style-type: none;
+  padding: 1.3rem 2.3rem;
+  margin: 1.3rem 2.3rem;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  text-align: left;
+}
+.header .menu-items .dropdown li > a {
+  color: #171616;
+}
+.header .menu-items .dropdown li:hover {
+  border-color: #6CAC3D;
+}
+.header .menu .apart-renov:hover > .dropdown, .header .menu .intr-design:hover > .dropdown, .header .menu .room-renov:hover > .dropdown {
+  display: block;
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */
