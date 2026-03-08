@@ -119,7 +119,9 @@
                 left: 0;
                 display: none;
                 box-shadow: rgba(190, 190, 190, 0.25) 0 0 10px;
+                background-color: $white;
                 transition: all .2s;
+                z-index: 100;
                 li{
                     list-style-type: none;
                     padding: 1.3rem 2.3rem;

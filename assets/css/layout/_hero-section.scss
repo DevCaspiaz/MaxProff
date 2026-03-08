@@ -1,0 +1,198 @@
+@use '../abstracts/vairables' as *;
+
+
+.hero-section{
+    margin-top: 3.3rem;
+    padding: 0 12rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url("/assets/image/hero-cover.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 68%;
+}
+
+.hero__left{
+    width: 60%;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+
+    .hero__heading{
+        font-size: 6rem;
+        font-weight: 700;
+        color: $black;
+        margin-bottom: 3rem;
+    }
+    .hero__cost{
+        font-size: 4.4rem;
+        font-weight: 700;
+        color: #000000;
+        margin-bottom: 6.4rem;
+
+        .btn-green{
+            font-size: 6rem;
+            border-radius: 1rem;
+            padding: 0 .5rem;
+        }
+    }
+
+    .hero__services{
+        width: 70%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+        column-gap: 5rem;
+
+        .service-text{
+            font-size: $heading-2;
+            font-weight: 700;
+            color: $black;
+            margin-top: .8rem;
+        }
+    }
+}
+
+
+
+.hero__right{
+
+    background-color: $white;
+    border-radius: .7rem;
+    padding-bottom: 2.8rem;
+
+    .hero__right--title{
+        font-size: 2rem;
+        font-weight: 900;
+        color: $black;
+        text-transform: uppercase;
+        padding: 3.8rem 2.4rem 1.8rem 5.3rem;
+    }
+
+    .type-container, .area, .repair-info, .customer-order{
+        padding-left: 5.3rem;
+    }
+
+    & h3{
+        font-size: $default-size;
+        font-weight: 700;
+        color: #595959;
+        padding-bottom: 1.8rem;
+    }
+
+    & input[type="radio"]{
+        transform: scale(1.4);
+    }
+
+
+    .type-container{
+
+        >*{
+            border-bottom: 3px solid #D6D6D6;
+            padding: 1.8rem 0;
+        }
+
+        .type-repair{
+
+            .input-container{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .type-property{
+            .input-container{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+            }
+        }
+
+        .number-rooms{
+            .input-container{
+                display: flex;
+                gap: 2rem;
+            }
+        }
+
+        .input-items{
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            label{
+                color: #595959;
+                font-size: $heading-3;
+                font-weight: 400;
+            }
+
+            & input:checked + label{
+                color: $blue-1;
+            }
+        }
+    }
+
+
+    .area{
+        padding-bottom: 2.4rem;
+        padding-top: 1.8rem;
+
+        .input-items{
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            input{
+                flex-basis: 80%;
+            }
+            span.area-value{
+                color: #595959;
+                font-size: $heading-3;
+                font-weight: 400;
+            }
+        }
+
+
+    }
+
+    .repair-info{
+        background-color: $smoky;
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: $blue-1;
+
+        h4{
+            font-size: $default-size;
+            font-weight: 400;
+        }
+        p{
+            font-weight: 700;
+            font-size: $heading-2;
+        }
+    }
+
+    .customer-order{
+        padding-top: 1.8rem;
+
+        .input-items{
+            display: flex;
+            gap: 1.5rem;
+
+            input{
+                outline: none;
+                padding: 1rem;
+                font-size: $heading-3;
+                border: 1px solid #CCCCCC;
+            }
+
+            .hero__right--btn{
+                padding: 1.3rem 2.5rem;
+                font-size: $heading-2;
+                font-weight: 700;
+            }
+        }
+    }
+}

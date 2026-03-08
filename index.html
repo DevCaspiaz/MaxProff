@@ -103,8 +103,179 @@
 
     </header>
 
-    <main></main>
+    <main>
+        <div class="hero-section">
+            
+            <div class="hero__left">
+
+                <h1 class="hero__heading">APARTMENT RENOVATION IN NEW YORK REGION</h1>
+                <h2 class="hero__cost">from <span class="btn-green">2500</span> $/m<sup>2</sup></h2>
+
+                <div class="hero__services">
+
+                    <div class="service-content">
+                        <img src="./assets/image/cooperation 2.svg" alt="cooperation" class="service-icon">
+                        <p class="service-text">Payment upon acceptance of work</p>
+                    </div>
+                    <div class="service-content">
+                        <img src="./assets/image/consent 2.svg" alt="consent" class="service-icon">
+                        <p class="service-text">FREE measurement and estimation</p>
+                    </div>
+                    <div class="service-content">
+                        <img src="./assets/image/builder 2.svg" alt="builder" class="service-icon">
+                        <p class="service-text">Departure of the estimator</p>
+                    </div>
+                    <div class="service-content">
+                        <img src="./assets/image/guarantee 2.svg" alt="guarantee" class="service-icon">
+                        <p class="service-text">3 years warranty</p>
+                    </div>
+
+                    
+                </div>
+
+            </div>
+
+            <div class="hero__right">
+
+                <h2 class="hero__right--title">CALCULATE the cost of repairs</h2>
+
+                <div class="type-container">
+
+                    <div class="type-repair">
+
+                        <h3 class="repair--title">Type of repair:</h3>
+                        
+                        <div class="input-container">
+
+                            <div class="input-items">
+                                <input type="radio" name="repair" id="cosmetic">
+                                <label for="cosmetic">Cosmetic</label>
+                            </div>
+                            
+                            <div class="input-items">
+                                <input type="radio" name="repair" id="capital">
+                                <label for="capital">Capital</label>
+                            </div>
+
+                            <div class="input-items">
+                                <input type="radio" name="repair" id="turnkey">
+                                <label for="turnkey">Turnkey</label>
+                            </div>
+
+                            <div class="input-items">
+                                <input type="radio" name="repair" id="designer">
+                                <label for="designer">Designer</label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="type-property">
+
+                        <h3 class="property--title">Type of your property:</h3>
+
+                        <div class="input-container">
+
+                            <div class="input-items">
+                                <input type="radio" name="property" id="n-building">
+                                <label for="n-building">New building</label>
+                            </div>
+                            
+                            <div class="input-items">
+                                <input type="radio" name="property" id="second-house">
+                                <label for="second-house">Secondary housing</label>
+                            </div>
+
+                        </div>
+                        
+
+                    </div>
+
+                    <div class="number-rooms">
+
+                        <h3 class="number-rooms__title">Number of rooms</h3>
+
+                        <div class="input-container">
+
+                            <div class="input-items">
+                                <input type="radio" name="numbers" id="one">
+                                <label for="one">1</label>
+                            </div>
+                            <div class="input-items">
+                                <input type="radio" name="numbers" id="two">
+                                <label for="two">2</label>
+                            </div>
+                            <div class="input-items">
+                                <input type="radio" name="numbers" id="three">
+                                <label for="three">3</label>
+                            </div>
+                            <div class="input-items">
+                                <input type="radio" name="numbers" id="four">
+                                <label for="four">4</label>
+                            </div>
+
+
+
+                            
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <div class="area">
+
+                    <h3 class="area--title">Area, m<sup>2</sup>:</h3>
+
+                    <div class="input-items">
+                    <input type="range" name="area" id="areaRange">
+                    <span class="area-value">35</span>
+                    </div>
+
+
+                
+                </div>
+
+                <div class="repair-info">
+                    <div class="repair-time">
+                        <h4 class=" repair-info--title">Repair time:</h4>
+                        <p class="repair-time__day">up to 34 days</p>
+                    </div>
+                    <div class="repair-discount">
+                        <h4 class=" repair-info--title">The discount will be:</h4>
+                        <p class="repair-time__day">20 000 $</p>
+                    </div>
+                </div>
+
+                <div class="customer-order">
+                    <h3 class="customer-order__title">Enter your phone number</h3>
+
+                    <div class="input-items">
+                        <input type="tel" placeholder="+1">
+                        <button class="btn-green hero__right--btn">Order</button>
+                    </div>
+                </div> 
+
+            </div>
+
+        </div>
+        
+    </main>
 
     <footer></footer>
+
+
+
+
+    <script>
+        const range = document.getElementById("areaRange");
+        const value = document.querySelector(".area-value");
+
+        range.addEventListener("input", function () {
+            value.textContent = this.value;
+        });
+    </script>
 </body>
 </html>
