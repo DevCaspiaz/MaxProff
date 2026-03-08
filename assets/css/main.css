@@ -133,8 +133,8 @@ body {
 .header .menu {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  align-items: center;
   gap: 2rem;
+  align-items: center;
   margin: 0 12rem;
   border-top: 1px solid #6CAC3D;
   border-bottom: 1px solid #6CAC3D;
@@ -223,9 +223,9 @@ body {
   width: 70%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 2rem;
   -moz-column-gap: 5rem;
        column-gap: 5rem;
+  row-gap: 2rem;
 }
 .hero__left .hero__services .service-text {
   font-size: 1.8rem;
@@ -268,7 +268,7 @@ body {
 }
 .hero__right .type-container .type-property .input-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 .hero__right .type-container .number-rooms .input-container {
   display: flex;
@@ -276,8 +276,8 @@ body {
 }
 .hero__right .type-container .input-items {
   display: flex;
-  gap: 1rem;
   align-items: center;
+  gap: 1rem;
 }
 .hero__right .type-container .input-items label {
   color: #595959;
@@ -309,7 +309,7 @@ body {
   padding-top: 1.8rem;
   padding-bottom: 1.8rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   color: #2D4872;
 }
 .hero__right .repair-info h4 {

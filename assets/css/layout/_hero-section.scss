@@ -1,12 +1,12 @@
 @use '../abstracts/vairables' as *;
+@use '../abstracts/mixins' as *;
 
 
 .hero-section{
     margin-top: 3.3rem;
     padding: 0 12rem;
     padding-bottom: 2rem;
-    display: flex;
-    justify-content: space-between;
+    @include flex($justify: space-between);
     background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), url("/assets/image/hero-cover.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -16,8 +16,7 @@
 .hero__left{
     width: 60%;
     padding: 3rem 0;
-    display: flex;
-    flex-direction: column;
+    @include flex($direction: column);
 
     .hero__heading{
         font-size: 6rem;
@@ -40,10 +39,7 @@
 
     .hero__services{
         width: 70%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 2rem;
-        column-gap: 5rem;
+        @include grid ($columns: repeat(2, 1fr), $column-gap: 5rem, $row-gap: 2rem);
 
         .service-text{
             font-size: $heading-2;
@@ -96,30 +92,26 @@
         .type-repair{
 
             .input-container{
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
+
+                @include grid ($columns: repeat(2, 1fr));
             }
         }
 
         .type-property{
             .input-container{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
+                @include grid ($columns: repeat(2, 1fr));
 
             }
         }
 
         .number-rooms{
             .input-container{
-                display: flex;
-                gap: 2rem;
+                @include flex($gap: 2rem);
             }
         }
 
         .input-items{
-            display: flex;
-            gap: 1rem;
-            align-items: center;
+            @include flex($align: center, $gap: 1rem);
 
             label{
                 color: #595959;
@@ -139,9 +131,7 @@
         padding-top: 1.8rem;
 
         .input-items{
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
+            @include flex($align: center, $gap: 1.5rem);
 
             input{
                 flex-basis: 80%;
@@ -160,8 +150,7 @@
         background-color: $smoky;
         padding-top: 1.8rem;
         padding-bottom: 1.8rem;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        @include grid ($columns: repeat(2, 1fr));
         color: $blue-1;
 
         h4{
@@ -178,8 +167,7 @@
         padding-top: 1.8rem;
 
         .input-items{
-            display: flex;
-            gap: 1.5rem;
+            @include flex($gap: 1.5rem);
 
             input{
                 outline: none;
