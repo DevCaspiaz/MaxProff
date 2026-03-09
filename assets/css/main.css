@@ -48,6 +48,9 @@ body {
 .btn-green {
   border: 1px solid #6CAC3D;
   border-radius: 0.4rem;
+  padding: 1.3rem 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
   background-color: #6CAC3D;
   color: #FFFFFF;
   cursor: pointer;
@@ -214,7 +217,7 @@ body {
   color: #000000;
   margin-bottom: 6.4rem;
 }
-.hero__left .hero__cost .btn-green {
+.hero__left .hero__cost .hero-cost {
   font-size: 6rem;
   border-radius: 1rem;
   padding: 0 0.5rem;
@@ -337,4 +340,152 @@ body {
   padding: 1.3rem 2.5rem;
   font-size: 1.8rem;
   font-weight: 700;
+}
+
+.repair-price {
+  padding: 7rem 12rem;
+}
+.repair-price__title {
+  text-align: center;
+  margin-bottom: 4.8rem;
+  color: #171616;
+  font-size: 4.2rem;
+}
+.repair-price img {
+  width: 20px;
+  height: 20px;
+}
+.repair-price .price-container {
+  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+.repair-price .price-cards {
+  background-color: #FFFFFF;
+  box-shadow: 0 0 10px 0 rgba(147, 147, 147, 0.2509803922);
+  border-radius: 1.6rem;
+}
+.repair-price .card-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #E3EAEF;
+  border-top-left-radius: 1.6rem;
+  border-top-right-radius: 1.6rem;
+  padding: 1.5rem 2.5rem;
+}
+.repair-price .card-heading__img {
+  width: 5.7rem;
+  height: 5.7rem;
+  border-radius: 50rem;
+}
+.repair-price .card-heading__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+.repair-price .card-heading__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.repair-price .card-heading__text--title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #6CAC3D;
+}
+.repair-price .card-heading__text--day {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: lowercase;
+  color: #171616;
+}
+.repair-price .card-text {
+  font-size: 1.4rem;
+  font-weight: 300;
+  align-content: flex-start;
+  padding: 1rem 2.5rem;
+  height: 13rem;
+  border-bottom: 2px solid #2D4872;
+}
+.repair-price .card-title {
+  padding: 1.5rem 2.5rem 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.repair-price .card-list {
+  padding: 0 2.5rem;
+  list-style: none;
+}
+.repair-price .card-list__items {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.repair-price .disable-item, .repair-price .disable-title {
+  color: #C4C4C4;
+}
+.repair-price .extra {
+  max-height: 20px;
+  overflow: hidden;
+}
+.repair-price .extra-list {
+  max-height: 0;
+  overflow: hidden;
+}
+.repair-price .price-cards.open .extra, .repair-price .price-cards.open .extra-list {
+  max-height: 200px;
+}
+.repair-price .price-cards.open .disable-item,
+.repair-price .price-cards.open .disable-title {
+  color: #171616;
+}
+.repair-price .card-cost {
+  padding: 2.4rem 3rem;
+}
+.repair-price .card-cost .toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  margin: 0 auto;
+  cursor: pointer;
+  padding: 0 0 1rem;
+}
+.repair-price .card-cost .toggle span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2D4872;
+}
+.repair-price .card-cost .toggle img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.repair-price .card-cost .old-cost {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #171616;
+  text-decoration: line-through;
+  margin-right: 0.6rem;
+}
+.repair-price .card-cost .old-cost span {
+  font-weight: 700;
+}
+.repair-price .card-cost .current-cost {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #6CAC3D;
+}
+.repair-price .card-cost .current-cost span {
+  font-size: 1.8rem;
+}
+.repair-price .card-btn {
+  display: block;
+  margin: 0 auto;
 }/*# sourceMappingURL=main.css.map */

@@ -26,6 +26,9 @@
 .btn-green{
     border: 1px solid $green;
     border-radius: .4rem;
+    padding: 1.3rem 2.5rem;
+    font-size: $heading-2;
+    font-weight: 700;
     background-color: $green;
     color: $white;
     cursor: pointer;
