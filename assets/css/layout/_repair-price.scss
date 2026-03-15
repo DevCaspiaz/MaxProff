@@ -5,10 +5,7 @@
     padding: 7rem 12rem;
 
     &__title{
-        text-align: center;
         margin-bottom: 4.8rem;
-        color: $black;
-        font-size: $heading-1;
     }
     img{
         width: 20px;
@@ -16,7 +13,6 @@
     }
 
     .price-container{
-        background-color: red;
         @include grid($columns: repeat(auto-fit, minmax(28rem, 1fr)), $gap: 1rem);
         align-items: start;
     }
@@ -25,6 +21,7 @@
         background-color: $white;
         box-shadow: 0 0 10px 0 #93939340;
         border-radius: 1.6rem;
+        padding-bottom: 3rem;
     }
 
     .card-heading{
@@ -80,7 +77,6 @@
     }
     .card-list{
         padding: 0 2.5rem;
-        list-style: none;
 
         &__items{
             @include flex($align: center, $gap: .4rem)

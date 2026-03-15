@@ -41,3 +41,10 @@
         transform: scale(1.05);
     }
 }
+
+.input-btn{
+    transform: scale(1.4);
+}
+.input-btn, .input-btn+label{
+    cursor: pointer;
+}

@@ -6,6 +6,7 @@
   box-sizing: inherit;
   text-decoration: none;
   scroll-behavior: smooth;
+  list-style-type: none;
 }
 
 html {
@@ -22,6 +23,13 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
+  color: #171616;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 4.2rem;
   color: #171616;
 }
 
@@ -63,6 +71,14 @@ body {
   transform: scale(1.05);
 }
 
+.input-btn {
+  transform: scale(1.4);
+}
+
+.input-btn, .input-btn + label {
+  cursor: pointer;
+}
+
 .header .nav {
   margin: 0 12rem;
   padding: 2.3rem 0;
@@ -85,7 +101,6 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 2.4rem;
-  list-style-type: none;
 }
 .header .nav__list--items__link {
   color: #171616;
@@ -145,7 +160,6 @@ body {
 .header .menu-items {
   text-align: center;
   padding: 1.3rem 2.3rem;
-  list-style-type: none;
   position: relative;
   transition: all 0.2s;
 }
@@ -169,7 +183,6 @@ body {
   z-index: 100;
 }
 .header .menu-items .dropdown li {
-  list-style-type: none;
   padding: 1.3rem 2.3rem;
   margin: 1.3rem 2.3rem;
   border: 1px solid transparent;
@@ -258,9 +271,6 @@ body {
   color: #595959;
   padding-bottom: 1.8rem;
 }
-.hero__right input[type=radio] {
-  transform: scale(1.4);
-}
 .hero__right .type-container > * {
   border-bottom: 3px solid #D6D6D6;
   padding: 1.8rem 0;
@@ -346,17 +356,13 @@ body {
   padding: 7rem 12rem;
 }
 .repair-price__title {
-  text-align: center;
   margin-bottom: 4.8rem;
-  color: #171616;
-  font-size: 4.2rem;
 }
 .repair-price img {
   width: 20px;
   height: 20px;
 }
 .repair-price .price-container {
-  background-color: red;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   gap: 1rem;
@@ -366,6 +372,7 @@ body {
   background-color: #FFFFFF;
   box-shadow: 0 0 10px 0 rgba(147, 147, 147, 0.2509803922);
   border-radius: 1.6rem;
+  padding-bottom: 3rem;
 }
 .repair-price .card-heading {
   display: flex;
@@ -418,7 +425,6 @@ body {
 }
 .repair-price .card-list {
   padding: 0 2.5rem;
-  list-style: none;
 }
 .repair-price .card-list__items {
   display: flex;
@@ -488,4 +494,49 @@ body {
 .repair-price .card-btn {
   display: block;
   margin: 0 auto;
+}
+
+.examples {
+  background-color: #F8F8F8;
+  padding: 5rem 7rem;
+}
+.examples .examples__heading--title {
+  margin-bottom: 7rem;
+}
+.examples .examples__heading .examples-nav {
+  padding: 2rem;
+}
+.examples .examples__heading .examples-nav__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  gap: 2rem;
+}
+.examples .examples__heading .examples-nav__list--items {
+  padding: 1.5rem 0;
+  border-radius: 0.4rem;
+  background-color: #2D4872;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.examples .examples__heading .examples-nav__list--items a {
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.examples .examples__heading .examples-nav__list--items:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  transform: translateY(-0.5rem);
+}
+.examples .examples__heading .examples-nav__options {
+  width: 85%;
+  margin: 2.5rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 12rem));
+  gap: 2rem;
+  justify-content: center;
+  gap: 1rem;
+}
+.examples .examples__heading .examples-nav__options .options-items label {
+  margin-left: 0.7rem;
 }/*# sourceMappingURL=main.css.map */

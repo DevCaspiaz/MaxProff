@@ -22,7 +22,6 @@
 
         &__list{
             @include flex($align: center, $justify: space-between, $gap: 2.4rem);
-            list-style-type: none;
             
             &--items{
                 &__link{
@@ -87,7 +86,6 @@
         &-items{
             text-align: center;
             padding: 1.3rem 2.3rem;
-            list-style-type: none;
             position: relative;
 
             transition: all .2s;
@@ -111,7 +109,6 @@
                 transition: all .2s;
                 z-index: 100;
                 li{
-                    list-style-type: none;
                     padding: 1.3rem 2.3rem;
                     margin: 1.3rem 2.3rem;
                     border: 1px solid transparent;

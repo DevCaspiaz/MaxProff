@@ -149,22 +149,22 @@
                         <div class="input-container">
 
                             <div class="input-items">
-                                <input type="radio" name="repair" id="cosmetic">
+                                <input type="radio" name="repair" id="cosmetic" class="input-btn">
                                 <label for="cosmetic">Cosmetic</label>
                             </div>
                             
                             <div class="input-items">
-                                <input type="radio" name="repair" id="capital">
+                                <input type="radio" name="repair" id="capital" class="input-btn">
                                 <label for="capital">Capital</label>
                             </div>
 
                             <div class="input-items">
-                                <input type="radio" name="repair" id="turnkey">
+                                <input type="radio" name="repair" id="turnkey" class="input-btn">
                                 <label for="turnkey">Turnkey</label>
                             </div>
 
                             <div class="input-items">
-                                <input type="radio" name="repair" id="designer">
+                                <input type="radio" name="repair" id="designer" class="input-btn">
                                 <label for="designer">Designer</label>
                             </div>
 
@@ -179,12 +179,12 @@
                         <div class="input-container">
 
                             <div class="input-items">
-                                <input type="radio" name="property" id="n-building">
+                                <input type="radio" name="property" id="n-building" class="input-btn">
                                 <label for="n-building">New building</label>
                             </div>
                             
                             <div class="input-items">
-                                <input type="radio" name="property" id="second-house">
+                                <input type="radio" name="property" id="second-house" class="input-btn">
                                 <label for="second-house">Secondary housing</label>
                             </div>
 
@@ -200,19 +200,19 @@
                         <div class="input-container">
 
                             <div class="input-items">
-                                <input type="radio" name="numbers" id="one">
+                                <input type="radio" name="numbers" id="one" class="input-btn">
                                 <label for="one">1</label>
                             </div>
                             <div class="input-items">
-                                <input type="radio" name="numbers" id="two">
+                                <input type="radio" name="numbers" id="two" class="input-btn">
                                 <label for="two">2</label>
                             </div>
                             <div class="input-items">
-                                <input type="radio" name="numbers" id="three">
+                                <input type="radio" name="numbers" id="three" class="input-btn">
                                 <label for="three">3</label>
                             </div>
                             <div class="input-items">
-                                <input type="radio" name="numbers" id="four">
+                                <input type="radio" name="numbers" id="four" class="input-btn">
                                 <label for="four">4</label>
                             </div>
 
@@ -265,7 +265,7 @@
 
         <section class="repair-price">
 
-            <h2 class="repair-price__title">Repair prices</h2>
+            <h2 class="repair-price__title section-title">Repair prices</h2>
 
             <div class="price-container">
 
@@ -494,6 +494,63 @@
             </div>
 
         </section>
+
+        <section class="examples">
+
+            <div class="examples__heading">
+
+                <h3 class="examples__heading--title section-title">Examples of our work</h3>
+
+                <div class="examples-nav">
+                    
+                    <ul class="examples-nav__list">
+                        <li class="examples-nav__list--items"><a href="#">Major</a></li>
+                        <li class="examples-nav__list--items"><a href="#">Cosmetic</a></li>
+                        <li class="examples-nav__list--items"><a href="#">Turnkey</a></li>
+                        <li class="examples-nav__list--items"><a href="#">Studios</a></li>
+                        <li class="examples-nav__list--items"><a href="#">Draft</a></li>
+                    </ul>
+
+                    <div class="examples-nav__options">
+
+                        <div class="options-items">
+                            <input type="radio" name="m2" id="55m2" class="input-btn">
+                            <label for="55m2">55 m<sup>2</sup></label>
+                        </div>
+                        <div class="options-items">
+                            <input type="radio" name="m2" id="61m2" class="input-btn">
+                            <label for="61m2">61 m<sup>2</sup></label>
+                        </div>
+                        <div class="options-items">
+                            <input type="radio" name="m2" id="72m2" class="input-btn">
+                            <label for="72m2">72 m<sup>2</sup></label>
+                        </div>
+                        <div class="options-items">
+                            <input type="radio" name="m2" id="88m2" class="input-btn">
+                            <label for="88m2">88 m<sup>2</sup></label>
+                        </div>
+                        <div class="options-items">
+                            <input type="radio" name="m2" id="106m2" class="input-btn">
+                            <label for="106m2">106 m<sup>2</sup></label>
+                        </div>
+                        <div class="options-items">
+                            <input type="radio" name="m2" id="63m2" class="input-btn">
+                            <label for="63m2">63 m<sup>2</sup></label>
+                        </div>
+                        <div class="options-items">
+                            <input type="radio" name="m2" id="41m2" class="input-btn">
+                            <label for="41m2">41 m<sup>2</sup></label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <div class="examples__content"></div>
+
+        </section>
         
         
     </main>
@@ -511,14 +568,6 @@
             value.textContent = this.value;
         });
 
-
-    document.querySelectorAll(".price-cards").forEach(card => {
-        const btn = card.querySelector(".toggle");
-
-        btn.addEventListener("click", () => {
-            card.classList.toggle("open");
-        });
-    });
     </script>
 </body>
 </html>
