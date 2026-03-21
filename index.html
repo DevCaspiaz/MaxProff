@@ -504,15 +504,19 @@
                 <div class="examples-nav">
                     
                     <ul class="examples-nav__list">
-                        <li class="examples-nav__list--items"><a href="#">Major</a></li>
-                        <li class="examples-nav__list--items"><a href="#">Cosmetic</a></li>
-                        <li class="examples-nav__list--items"><a href="#">Turnkey</a></li>
-                        <li class="examples-nav__list--items"><a href="#">Studios</a></li>
-                        <li class="examples-nav__list--items"><a href="#">Draft</a></li>
+                        <li class="examples-nav__list--items"><a href="">Major</a></li>
+                        <li class="examples-nav__list--items"><a href="">Cosmetic</a></li>
+                        <li class="examples-nav__list--items"><a href="">Turnkey</a></li>
+                        <li class="examples-nav__list--items"><a href="">Studios</a></li>
+                        <li class="examples-nav__list--items"><a href="">Draft</a></li>
                     </ul>
 
                     <div class="examples-nav__options">
 
+                        <div class="options-items">
+                            <input type="radio" name="m2" id="41m2" class="input-btn">
+                            <label for="41m2">41 m<sup>2</sup></label>
+                        </div>
                         <div class="options-items">
                             <input type="radio" name="m2" id="55m2" class="input-btn">
                             <label for="55m2">55 m<sup>2</sup></label>
@@ -520,6 +524,10 @@
                         <div class="options-items">
                             <input type="radio" name="m2" id="61m2" class="input-btn">
                             <label for="61m2">61 m<sup>2</sup></label>
+                        </div>
+                        <div class="options-items">
+                            <input type="radio" name="m2" id="63m2" class="input-btn">
+                            <label for="63m2">63 m<sup>2</sup></label>
                         </div>
                         <div class="options-items">
                             <input type="radio" name="m2" id="72m2" class="input-btn">
@@ -533,13 +541,63 @@
                             <input type="radio" name="m2" id="106m2" class="input-btn">
                             <label for="106m2">106 m<sup>2</sup></label>
                         </div>
-                        <div class="options-items">
-                            <input type="radio" name="m2" id="63m2" class="input-btn">
-                            <label for="63m2">63 m<sup>2</sup></label>
-                        </div>
-                        <div class="options-items">
-                            <input type="radio" name="m2" id="41m2" class="input-btn">
-                            <label for="41m2">41 m<sup>2</sup></label>
+
+                    </div>
+
+                </div>
+                
+
+            </div>
+            
+            <div class="examples__container">
+
+                <div class="examples__container--arrows">
+                    <div class="content-arrows arrow-left"><img src="./assets/image/content-arrow-left.svg" alt="arrow"></div>
+                    <div class="content-arrows arrow-right"><img src="./assets/image/content-arrow-right.svg" alt="arrow"></div>
+                </div>
+
+                <div class="examples__container--content">
+
+                    <div class="content__slide-column">
+                        <div class="slide-column--img"><img src="./assets/image/hero-cover.jpg" alt="image 1"></div>
+                        <div class="slide-column--img"><img src="./assets/image/hero-cover.jpg" alt="image 1"></div>
+                        <div class="slide-column--img"><img src="./assets/image/hero-cover.jpg" alt="image 1"></div>
+                        <div class="slide-column--img"><img src="./assets/image/hero-cover.jpg" alt="image 1"></div>
+                        <div class="slide-column--img"><img src="./assets/image/hero-cover.jpg" alt="image 1"></div>
+                    </div>
+
+                    <div class="content__slide-row">
+
+                        <div class="slide-row-card">
+                            <div class="slide-row--img"><img src="./assets/image/hero-cover.jpg" alt=""></div>
+                            <div class="slide-row--info">
+                                <div class="info-room">
+                                    <div class="info-room--list"><img src="./assets/image/dollar-sign.svg" alt="dollar"><span>Amount:</span></div>
+                                    <div class="info-room--value">2 000 $</div>
+                                    <div class="info-room--list"><img src="./assets/image/grid.svg" alt="dollar"><span>Area:</span></div>
+                                    <div class="info-room--value">43 m<sup>2</sup></div>
+                                    <div class="info-room--list"><img src="./assets/image/calendar.svg" alt="dollar"><span>Duration:</span></div>
+                                    <div class="info-room--value">90 days</div>
+                                    <div class="info-room--list"><img src="./assets/image/home.svg" alt="dollar"><span>Rooms:</span></div>
+                                    <div class="info-room--value">3</div>
+                                    <div class="info-room--list"><img src="./assets/image/map-pin.svg" alt="dollar"><span>Address:</span></div>
+                                    <div class="info-room--value">Garden 14</div>
+                                    <div class="info-room--list">
+                                        <img src="./assets/image/file-text.svg" alt="dollar">
+                                        <span>List of tasks:</span>
+                                    </div>
+                                </div>
+                                <div class="room-details">
+                                    <ul>
+                                        <li>Plastering walls using guide rails</li>
+                                        <li>Priming walls and ceilings</li>
+                                        <li>Installing stretch ceilings</li>
+                                        <li>Smoothing walls for wallpapering</li>
+                                        <li>Electrical wiring</li>
+                                        <li>Installing baseboards and window sills</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -547,9 +605,10 @@
                 </div>
 
             </div>
-            
-            <div class="examples__content"></div>
 
+            <div class="examples__btn">
+                <button class="btn-green">Submit a request</button>
+            </div>
         </section>
         
         
@@ -566,6 +625,21 @@
 
         range.addEventListener("input", function () {
             value.textContent = this.value;
+        });
+
+
+
+
+        const items = document.querySelectorAll(".examples-nav__list--items");
+
+        items.forEach(item => {
+            item.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                items.forEach(i => i.classList.remove("active"));
+
+                this.classList.add("active");
+            });
         });
 
     </script>

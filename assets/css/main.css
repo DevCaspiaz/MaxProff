@@ -498,37 +498,45 @@ body {
 
 .examples {
   background-color: #F8F8F8;
+}
+.examples__heading {
   padding: 5rem 7rem;
 }
-.examples .examples__heading--title {
+.examples__heading--title {
   margin-bottom: 7rem;
 }
-.examples .examples__heading .examples-nav {
+.examples__heading .examples-nav {
   padding: 2rem;
 }
-.examples .examples__heading .examples-nav__list {
+.examples__heading .examples-nav__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
   gap: 2rem;
 }
-.examples .examples__heading .examples-nav__list--items {
+.examples__heading .examples-nav__list--items {
   padding: 1.5rem 0;
   border-radius: 0.4rem;
-  background-color: #2D4872;
+  background-color: #E6E6E6;
   text-align: center;
   cursor: pointer;
   transition: all 0.1s;
 }
-.examples .examples__heading .examples-nav__list--items a {
-  color: #FFFFFF;
+.examples__heading .examples-nav__list--items a {
+  color: #595959;
   font-size: 1.6rem;
   font-weight: 700;
 }
-.examples .examples__heading .examples-nav__list--items:hover {
+.examples__heading .examples-nav__list--items:hover {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   transform: translateY(-0.5rem);
 }
-.examples .examples__heading .examples-nav__options {
+.examples__heading .examples-nav .examples-nav__list--items.active {
+  background-color: #2D4872;
+}
+.examples__heading .examples-nav .examples-nav__list--items.active a {
+  color: #FFFFFF;
+}
+.examples__heading .examples-nav__options {
   width: 85%;
   margin: 2.5rem auto;
   display: grid;
@@ -537,6 +545,112 @@ body {
   justify-content: center;
   gap: 1rem;
 }
-.examples .examples__heading .examples-nav__options .options-items label {
+.examples__heading .examples-nav__options .options-items label {
   margin-left: 0.7rem;
+}
+.examples__container {
+  position: relative;
+  padding: 0 7rem;
+  margin: 0 2.5rem;
+}
+.examples__container .arrow-left, .examples__container .arrow-right {
+  width: 5.5rem;
+  height: 5.5rem;
+  padding: 1.5rem;
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.examples__container .arrow-left img, .examples__container .arrow-right img {
+  width: 100%;
+  height: 100%;
+}
+.examples__container .arrow-left {
+  top: 50%;
+  left: 0;
+}
+.examples__container .arrow-right {
+  top: 50%;
+  right: 0;
+}
+.examples__container--content {
+  display: flex;
+  gap: 2rem;
+}
+.examples__container--content .content__slide-column {
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+.examples__container--content .content__slide-column .slide-column--img {
+  max-width: 8.2rem;
+  max-height: 5.8rem;
+  width: 8rem;
+  height: 5.8rem;
+  border: 2px solid darkslategray;
+  border-radius: 2px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.examples__container--content .content__slide-column .slide-column--img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.examples__container--content .content__slide-row .slide-row-card {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 5rem;
+  box-shadow: 0 4px 10px #DFDFDF;
+}
+.examples__container--content .content__slide-row .slide-row-card .slide-row--img {
+  width: 100%;
+  height: 500px;
+}
+.examples__container--content .content__slide-row .slide-row-card .slide-row--img img {
+  width: inherit;
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 1rem;
+}
+.examples__container--content .content__slide-row .slide-row-card .slide-row--info {
+  width: 100%;
+  padding: 5rem 0;
+}
+.examples__container--content .content__slide-row .slide-row-card .slide-row--info .info-room {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.examples__container--content .content__slide-row .slide-row-card .slide-row--info .info-room--list {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.examples__container--content .content__slide-row .slide-row-card .slide-row--info .info-room--list span {
+  color: #595959;
+  font-weight: 400;
+}
+.examples__container--content .content__slide-row .slide-row-card .slide-row--info .info-room--value {
+  font-weight: 700;
+}
+.examples__container--content .content__slide-row .slide-row-card .slide-row--info .room-details {
+  padding: 0 3rem;
+}
+.examples__container--content .content__slide-row .slide-row-card .slide-row--info .room-details li {
+  list-style-type: disc;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #171616;
+}
+.examples__btn {
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: 3rem auto;
 }/*# sourceMappingURL=main.css.map */
